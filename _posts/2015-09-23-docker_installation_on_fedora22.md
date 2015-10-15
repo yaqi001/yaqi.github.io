@@ -171,4 +171,7 @@ $ sudo service docker start
    # systemctl restart docker
    ~~~
 
+## Docker 存储驱动
+
+1. AUFS 
 现在您就可以开启您的 Docker 之旅啦！
