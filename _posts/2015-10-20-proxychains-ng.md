@@ -17,7 +17,6 @@ tags:
        ```
        $ sudo make install-config （安装至系统中）
        ```
-       。
 
    (2) 或者执行 `sudo make`，不安装至系统。
 
