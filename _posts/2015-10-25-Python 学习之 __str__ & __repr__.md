@@ -32,7 +32,7 @@ tags:
   ~~~
   像上面这样的输出太突兀了有没有！所以，有了下面的 __str__ & __repr__ 方法。
 
-* 先来说一说 __str__ 这个函数:
+* 先来说一说 `__str__` 这个函数:
 
   ~~~ python
   # Stu1.py
@@ -57,7 +57,7 @@ tags:
   className: ply
   ~~~
 
-* 下面看看 __repr__
+* 下面看看 `__repr__`
 
   ~~~ bash
   >>> class Stu():
