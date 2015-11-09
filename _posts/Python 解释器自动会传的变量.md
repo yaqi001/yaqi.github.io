@@ -1,0 +1,31 @@
+---
+author: yingyun001
+layout: post
+title: "Python 解释器自动会传的变量"
+date: 2015-10-25 15:00
+category: Python
+tags:
+- Python
+- 学习
+---
+
+1. `self`
+
+   ~~~ python
+   class Staff(object):
+      def __init__(self, name, age):
+         self.name = name
+         self.age = age
+      def printInfo(self):
+         print '%s is %r-years-old.' % (self.name, self.age)
+
+   staff1 = Staff('helen', 24)
+   staff2 = Staff('ply', 25)
+   staff1.printInfo()
+   staff2.printInfo()
+   ~~~
+
+   ~~~ bash
+   helen is 24-years-old.
+   ply is 25-years-old.
+   ~~~
