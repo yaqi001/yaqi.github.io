@@ -9,10 +9,33 @@ tags:
 - 学习
 ---
 
+* 引子
+  
+  不说废话，Python 小白先上菜：
+  
+  ~~~ python
+  # Stu0.py
+  class Stu():
+     def __init__(self, name, score):
+        self.name = name
+        self.score = score
+       
+  s1 = Stu('helen', 100)
+  print s1
+  print Stu('ply', 100)
+  ~~~
+
+  ~~~ bash
+  # 运行结果
+  <__main__.Stu instance at 0x7fa45d4e9560>
+  <__main__.Stu instance at 0x7fa45d4e95a8>
+  ~~~
+  像上面这样的输出太突兀了有没有！所以，有了下面的 __str__ & __repr__ 方法。
+
 * 先来说一说 __str__ 这个函数:
 
   ~~~ python
-  # Stu.py
+  # Stu1.py
   class Stu():
      def __init__(self, name, score):
         self.name = name
