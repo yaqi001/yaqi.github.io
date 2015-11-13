@@ -25,10 +25,9 @@ tags:
       * [CRUSH map]
    * 至少两个 [Ceph OSD Daemon]：用于存储数据；处理数据的 [replication]，[recovery]，[backfilling]，[rebalancing]；在每次 Heartbeat 的时候对其它 Ceph OSD 后台程序进行检查从而为 Ceph Monitor 提供一些监控数据。如果集群为您的数据做了两份拷贝，那 Ceph Storage Cluster 需要至少两个 Ceph OSD 后台程序才能达到 active + clean 的状态（**什么是 active + clean 状态..o.O**）。
 
-* [Ceph Object Gateway](http://docs.ceph.com/docs/master/radosgw/)：是构建在 `librados` 之上的对象存储接口，用来给应用程序提供 Ceph 存储集群的 RESTful gateway.这里支持两种接口：
-   * **S3-compatible**：
-   * **Swift-compatible**： 
-
+* [Ceph Object Gateway](http://docs.ceph.com/docs/master/radosgw/)：是构建在 `librados` 之上的对象存储接口，用来给应用程序提供 Ceph 存储集群的 RESTful gateway.这里支持以下两种接口；Ceph Object Storage 利用 Ceph Object Gateway 后台程序(**[radosgw](http://docs.ceph.com/docs/v0.69/man/8/radosgw/)**)，radosgw 是用于和 Ceph Storage Cluster 进行交互的 FastCGI 模块。
+   * **S3-compatible**：兼容了 Amazon S3 RESTful API 的接口提供了对象存储的功能。
+   * **Swift-compatible**：兼容了 OpenStack Swift API 的接口提供了对想存储的功能。
 
 [Ceph Block Device](http://docs.ceph.com/docs/master/rbd/rbd/)
 
@@ -37,8 +36,8 @@ tags:
 一些术语：
 
 * [librados](http://docs.ceph.com/docs/giant/rados/api/librados-intro/)： 
-* [replication](https://en.wikipedia.org/wiki/Replication_(computing))：
-* recovery：
+* [replication](https://en.wikipedia.org/wiki/Replication_(computing))：IBM 给出的[解释](https://www-01.ibm.com/software/data/replication/)
+* [recovery](https://en.wikipedia.org/wiki/Data_recovery)：
 * backfilling：
 * rebalancing：
 * active + clean：
